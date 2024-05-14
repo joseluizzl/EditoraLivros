@@ -1,0 +1,7 @@
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/editora/src/main/java/br/org/serratec/editora/dto/LivroDto.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/editora/src/main/java/br/org/serratec/editora/EditoraApplication.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/editora/src/main/java/br/org/serratec/editora/controller/LivroController.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/editora/src/main/java/br/org/serratec/editora/handler/LivroControllerHandler.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/editora/src/main/java/br/org/serratec/editora/repository/LivroRepository.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/editora/src/main/java/br/org/serratec/editora/model/Livro.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/editora/src/main/java/br/org/serratec/editora/service/LivroService.java

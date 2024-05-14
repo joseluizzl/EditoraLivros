@@ -1,0 +1,7 @@
+br/org/serratec/editora/model/Livro.class
+br/org/serratec/editora/handler/LivroControllerHandler.class
+br/org/serratec/editora/service/LivroService.class
+br/org/serratec/editora/controller/LivroController.class
+br/org/serratec/editora/EditoraApplication.class
+br/org/serratec/editora/dto/LivroDto.class
+br/org/serratec/editora/repository/LivroRepository.class

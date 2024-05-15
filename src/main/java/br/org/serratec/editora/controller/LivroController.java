@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.org.serratec.editora.dto.LivroDto;
@@ -32,6 +33,22 @@ public class LivroController {
 	public ResponseEntity<List<LivroDto>> obterTodos() {
 		return ResponseEntity.ok(livroService.obterTodos());
 	}
+	
+	@GetMapping("/titulo")
+	public ResponseEntity<List<LivroDto>> obterPorInicioTitulo(@RequestBody String inicioTitulo) {
+		return ResponseEntity.ok(livroService.obterPorInicioTitulo(inicioTitulo));
+	}
+	
+	@GetMapping("/autor")
+	public ResponseEntity<List<LivroDto>> obterFinalAutor(@RequestBody String finalAutor) {
+		return ResponseEntity.ok(livroService.obterFinalAutor(finalAutor));
+	}
+	
+	@GetMapping("/autor-e-titulo")
+	public ResponseEntity<List<LivroDto>> obterPorAutorETitulo(@RequestParam String autor, @RequestParam String titulo) {
+		return ResponseEntity.ok(livroService.obterPorAutorETitulo(autor, titulo));
+	}
+	
 	@PostMapping
 	public ResponseEntity<LivroDto> salvarLivro(@Valid @RequestBody LivroDto novoLivro) {
 		return new ResponseEntity<LivroDto>(livroService.salvarLivro(novoLivro), HttpStatus.CREATED);

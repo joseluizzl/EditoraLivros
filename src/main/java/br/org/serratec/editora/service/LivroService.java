@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import br.org.serratec.editora.dto.LivroDto;
 import br.org.serratec.editora.model.Livro;
@@ -59,5 +60,29 @@ public class LivroService {
 		}
 		
 		 return false;
+	}
+	
+	public List<LivroDto> obterPorInicioTitulo(String inicioTitulo) {
+		List<LivroDto> livros = new ArrayList<>();
+		livroRepository.findByTituloStartingWithIgnoreCase(inicioTitulo).forEach(l -> {
+			livros.add(l.toDto());
+		});
+		return livros;
+	}
+	
+	public List<LivroDto> obterFinalAutor(String finalAutor) {
+		List<LivroDto> livros = new ArrayList<>();
+		livroRepository.findByAutorEndingWithIgnoreCase(finalAutor).forEach(l -> {
+			livros.add(l.toDto());
+		});
+		return livros;
+	}
+	
+	public List<LivroDto> obterPorAutorETitulo(String autor, String titulo) {
+		List<LivroDto> livros = new ArrayList<>();
+		livroRepository.findByAutorAndTituloIgnoreCase(autor, titulo).forEach(l -> {
+			livros.add(l.toDto());
+		});
+		return livros;
 	}
 }
